@@ -1,202 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anshus Noufiya A K | Technology Lead & Scrum Master</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --dark: #0f172a;
-      --light: #f8fafc;
-      --muted: #64748b;
-      --card: #ffffff;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anshus Noufiya A K | Scrum Master | Technology Lead | Dubai UAE</title>
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.7;
-    }
+<style>
+:root {
+  --primary: #8f96a3;
+  --primary-dark: #6b7280;
+  --dark: #1f2937;
+  --light: #f5f6f8;
+  --muted: #6b7280;
+  --card: #ffffff;
+}
 
-    header {
-      background: linear-gradient(135deg, var(--dark), var(--primary));
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 
-    header h1 { font-size: 3rem; font-weight: 700; }
-    header p { font-size: 1.2rem; opacity: 0.9; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.7;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+/* NAVIGATION */
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
 
-    section { margin-bottom: 70px; }
+nav strong {
+  font-weight: 600;
+  color: var(--dark);
+}
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
 
-    .card {
-      background: var(--card);
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      margin-bottom: 25px;
-    }
+nav a:hover {
+  color: var(--primary);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
 
-    ul { padding-left: 18px; }
-    li { margin-bottom: 8px; }
+.btn:hover {
+  background: var(--primary-dark);
+}
 
-    .tag {
-      display: inline-block;
-      background: #e0e7ff;
-      color: #1e40af;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin: 5px 5px 0 0;
-    }
+/* HERO */
+header {
+  background: linear-gradient(135deg, #2d3748, #8f96a3);
+  color: white;
+  padding: 110px 20px;
+  text-align: center;
+}
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #020617;
-      color: #cbd5f5;
-    }
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
 
-    a { color: var(--primary); text-decoration: none; }
+header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  opacity: 0.95;
+}
 
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-    }
-  </style>
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+/* CARD */
+.card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  margin-bottom: 25px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+/* TAG */
+.tag {
+  display: inline-block;
+  background: #e5e7eb;
+  color: #374151;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 6px 6px 0 0;
+}
+
+/* PROJECT LINKS */
+.project-links {
+  margin-top: 15px;
+}
+
+.project-links a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  background: var(--primary);
+  color: white;
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  background: var(--primary-dark);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #111827;
+  color: #d1d5db;
+}
+
+@media(max-width:768px){
+  header h1 { font-size: 2.2rem; }
+}
+</style>
 </head>
+
 <body>
+
+<nav>
+  <strong>Anshus Noufiya</strong>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact" class="btn">Contact</a>
+  </div>
+</nav>
 
 <header>
   <h1>Anshus Noufiya A K</h1>
   <p>Technology Lead • Certified Scrum Master • Agile Coach</p>
-  <p>Dubai, UAE | Immediate Joiner</p>
+  <p>Dubai, United Arab Emirates | Immediate Joiner</p>
 </header>
 
 <div class="container">
 
-  <section>
-    <h2>Professional Summary</h2>
-    <div class="card">
-      Certified ScrumMaster with 12+ years of experience delivering scalable digital solutions across healthcare, government, finance, and eCommerce domains. Expert in Agile transformation, CI/CD pipelines, and full-stack development using PHP, Laravel, cloud platforms (AWS, Azure, GCP), and modern DevOps practices.
-    </div>
-  </section>
+<section id="about">
+  <h2>Professional Summary</h2>
+  <div class="card">
+    Certified Scrum Master and Technology Lead with 12+ years of experience delivering enterprise-scale solutions across Healthcare, Telecom, Banking, and Government sectors. Specialized in Agile Transformation, Scrum Leadership, DevOps CI/CD, Cloud Platforms (AWS, Azure, GCP), and Full Stack Architecture using PHP and JavaScript frameworks.
+  </div>
+</section>
 
-  <section>
-    <h2>Core Skills</h2>
-    <div class="card grid">
-      <div>
-        <strong>Agile & Leadership</strong>
-        <ul>
-          <li>Scrum, Kanban, Agile Coaching</li>
-          <li>Sprint Planning & Retrospectives</li>
-          <li>Stakeholder & Team Leadership</li>
-        </ul>
-      </div>
-      <div>
-        <strong>DevOps & Tools</strong>
-        <ul>
-          <li>Azure DevOps, Jira, Confluence</li>
-          <li>CI/CD Pipelines, Docker, Git</li>
-          <li>ServiceNow, Postman</li>
-        </ul>
-      </div>
-      <div>
-        <strong>Technical Stack</strong>
-        <ul>
-          <li>PHP (Laravel, Symfony, Yii)</li>
-          <li>JavaScript, AngularJS, jQuery</li>
-          <li>MySQL, PostgreSQL, DB2</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-
-    <div class="card">
-      <h3>Technology Lead / Scrum Master – Infosys</h3>
-      <p><em>2022 – 2025 | India</em></p>
+<section id="skills">
+  <h2>Core Skills</h2>
+  <div class="card grid">
+    <div>
+      <strong>Agile & Leadership</strong>
       <ul>
-        <li>Led 3 Agile squads across telecom, insurance, and retail domains.</li>
-        <li>Reduced defect leakage by 40% using CI/CD automation.</li>
-        <li>Mentored 15+ engineers, improving delivery velocity by 25%.</li>
-        <li>Handled $2M+ worth of enterprise deliverables.</li>
+        <li>Scrum, Kanban, SAFe</li>
+        <li>Agile Coaching</li>
+        <li>Sprint Planning & Retrospectives</li>
       </ul>
     </div>
-
-    <div class="card">
-      <h3>Full Stack Lead / Scrum Facilitator – ZH Healthcare</h3>
-      <p><em>2021 – 2022 | India</em></p>
+    <div>
+      <strong>DevOps & Cloud</strong>
       <ul>
-        <li>Delivered BlueHR – a modern EHR platform.</li>
-        <li>Implemented Kanban for QA & DevOps teams.</li>
-        <li>Improved system performance and user adoption.</li>
+        <li>Azure DevOps, Jira</li>
+        <li>CI/CD Pipelines</li>
+        <li>AWS, Azure, GCP</li>
       </ul>
     </div>
-
-  </section>
-
-  <section>
-    <h2>Key Projects</h2>
-    <div class="card">
-      <span class="tag">BlueHR – EHR</span>
-      <span class="tag">IFMS & Budget 2.0</span>
-      <span class="tag">TradeInEngine</span>
-      <span class="tag">Complaint Management</span>
-      <span class="tag">E-commerce Integrations</span>
-    </div>
-  </section>
-
-  <section>
-    <h2>Certifications & Awards</h2>
-    <div class="card">
+    <div>
+      <strong>Technology</strong>
       <ul>
-        <li>Certified ScrumMaster – Scrum Alliance</li>
-        <li>Infosys REAP Award (2024–2025)</li>
-        <li>Kerala CM Honorarium – Budget Software</li>
+        <li>PHP (Laravel, Yii, Symfony)</li>
+        <li>JavaScript, AngularJS, jQuery</li>
+        <li>MySQL, PostgreSQL</li>
       </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2>Contact</h2>
+<section id="portfolio">
+  <h2>Portfolio</h2>
+
+  <div class="grid">
+
     <div class="card">
-      <p>Email: <a href="mailto:anshusnoufiya.ak@gmail.com">anshusnoufiya.ak@gmail.com</a></p>
-      <p>Phone: +971 55 695 5619</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/anshus-noufiya-ak/" target="_blank">View Profile</a></p>
-      <p>Portfolio: <a href="https://anshusnoufiya.in" target="_blank">anshusnoufiya.in</a></p>
+      <h3>BlueHR – EHR Platform</h3>
+      <p>Agile delivery leadership for scalable hospital management system with CI/CD integration.</p>
+      <div>
+        <span class="tag">Healthcare</span>
+        <span class="tag">Scrum</span>
+        <span class="tag">Laravel</span>
+      </div>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>IFMS & Budget 2.0</h3>
+      <p>Government financial management platform ensuring scalable public finance operations.</p>
+      <div>
+        <span class="tag">Government</span>
+        <span class="tag">Enterprise</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Telecom Complaint Management</h3>
+      <p>Improved SLA adherence by 35% through Agile sprint governance.</p>
+      <div>
+        <span class="tag">Telecom</span>
+        <span class="tag">Azure DevOps</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: anshusnoufiya.ak@gmail.com</p>
+    <p>Phone: +971 55 695 5619</p>
+    <p>Location: Dubai, UAE</p>
+  </div>
+</section>
 
 </div>
 
 <footer>
-  © 2026 Anshus Noufiya A K • Technology Lead • Scrum Master
+  © 2026 Anshus Noufiya A K • Scrum Master • Technology Lead • Dubai UAE
 </footer>
 
 </body>
