@@ -1,140 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Anshus Noufiya A K | Scrum Master | Agile Coach</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anshus Noufiya | Scrum Master | Agile Coach</title>
 
-<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-
-<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+:root {
+    --primary: #2563eb;
+    --dark: #0f172a;
+    --muted: #64748b;
+    --bg: #f8fafc;
+}
+
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
 }
 
-#sideNav {
-    background: linear-gradient(135deg, #111827, #1f2937);
-}
-
-.text-primary {
-    color: #2563eb !important;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #d1d5db;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #60a5fa;
-}
-
-.resume-section {
+.section {
     padding: 80px 0;
 }
 
-.resume-section-content {
-    max-width: 900px;
+.container-custom {
+    max-width: 1100px;
+    margin: auto;
 }
 
-.social-icons a {
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.badge-skill {
+    background: #e2e8f0;
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 14px;
+    margin: 6px;
     display: inline-block;
-    width: 45px;
-    height: 45px;
-    background: #e5e7eb;
-    color: #111827;
-    text-align: center;
-    line-height: 45px;
-    border-radius: 50%;
-    margin-right: 10px;
+}
+
+.card-modern {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
     transition: 0.3s ease;
 }
 
-.social-icons a:hover {
-    background: #2563eb;
-    color: #fff;
-    transform: scale(1.1);
+.card-modern:hover {
+    transform: translateY(-5px);
 }
 
-.btn-primary {
-    background-color: #2563eb;
-    border: none;
+.btn-modern {
+    background: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.btn-primary:hover {
-    background-color: #1e40af;
+.btn-modern:hover {
+    background: #1d4ed8;
+    color: white;
 }
 
-.section-title {
-    font-weight: 700;
-    margin-bottom: 40px;
+.small-text {
+    color: var(--muted);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--muted);
 }
 </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">
-<span class="d-block d-lg-none">Anshus Noufiya</span>
-<span class="d-none d-lg-block">
-<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" width="140">
-</span>
-</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-<span class="navbar-toggler-icon"></span>
-</button>
+<!-- HERO SECTION -->
+<section class="section">
+<div class="container-custom text-center">
 
-<div class="collapse navbar-collapse" id="navbarResponsive">
-<ul class="navbar-nav">
-<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-<li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-<li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-<li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-</ul>
-</div>
-</div>
-</nav>
-
-<div class="container-fluid p-5">
-
-<!-- ABOUT -->
-<section id="about" class="resume-section">
-<div class="resume-section-content">
-<h1>
-Anshus <span class="text-primary">Noufiya A K</span>
-</h1>
-
-<h4 class="text-muted mt-3">
+<h1>Anshus Noufiya A K</h1>
+<p class="small-text mt-3">
 Certified Scrum Master | Agile Coach | Technology Lead
-</h4>
-
-<div class="mt-3">
-Dubai, UAE | Remote from India <br>
-+91 9846893660 | 
-<a href="mailto:anshusnoufiya.ak@gmail.com">anshusnoufiya.ak@gmail.com</a>
-</div>
-
-<p class="lead mt-4">
-Certified Scrum Master (CSM) and Agile Delivery Leader with 12+ years of experience driving enterprise digital transformation across Telecom, Healthcare, Government, and Retail sectors. Strong expertise in Scrum, Kanban, SAFe, CI/CD, DevOps, and Cloud (AWS, GCP, Azure). Proven track record of improving sprint velocity, reducing defect leakage, and leading distributed global teams.
 </p>
 
-<div class="social-icons mt-4">
-<a target="_blank" href="https://www.linkedin.com/in/anshus-noufiya-ak"><i class="fab fa-linkedin-in"></i></a>
-<a target="_blank" href="https://github.com/AnshusNoufiyaAK"><i class="fab fa-github"></i></a>
-<a target="_blank" href="assets/AnshusNoufiya-A-K-CV.pdf" download><i class="fas fa-file-download"></i></a>
-</div>
+<p class="mt-3 small-text">
+Dubai, UAE | Remote from India <br>
++91 9846893660 | anshusnoufiya.ak@gmail.com
+</p>
 
 <div class="mt-4">
-<a href="assets/AnshusNoufiya-A-K-CV.pdf" class="btn btn-primary px-4 py-2" download>
+<a href="assets/AnshusNoufiya-A-K-CV.pdf" class="btn-modern" download>
 Download Resume
 </a>
 </div>
@@ -142,90 +115,102 @@ Download Resume
 </div>
 </section>
 
-<hr>
+
+<!-- ABOUT -->
+<section class="section bg-white">
+<div class="container-custom">
+
+<h2>About Me</h2>
+
+<p>
+Certified Scrum Master with 12+ years of experience leading Agile transformation initiatives across Telecom, Healthcare, Government, and Enterprise sectors. Proven expertise in Scrum, Kanban, SAFe, DevOps, and cloud-based delivery (AWS, GCP, Azure). Skilled in scaling distributed teams, driving continuous improvement, and aligning delivery with enterprise governance.
+</p>
+
+</div>
+</section>
+
 
 <!-- EXPERIENCE -->
-<section id="experience" class="resume-section">
-<div class="resume-section-content">
-<h2 class="section-title">Professional Experience</h2>
+<section class="section">
+<div class="container-custom">
 
-<h4>Technology Lead – Infosys (2022–2025)</h4>
-<ul>
-<li>Led 3 Agile squads delivering enterprise solutions for UK, US & Middle East clients.</li>
-<li>Improved sprint velocity by 25% via Agile coaching.</li>
-<li>Reduced defect leakage by 40% using CI/CD automation.</li>
-<li>Managed $2M+ portfolios with cross-regional stakeholders.</li>
-</ul>
+<h2>Professional Experience</h2>
 
-<h4>Full Stack Developer Lead – ZH Healthcare (2021–2022)</h4>
+<div class="card-modern">
+<h5>Technology Lead – Infosys (2022–2025)</h5>
 <ul>
-<li>Delivered HIPAA-compliant EHR system (BlueHR).</li>
-<li>Improved system performance by 30%.</li>
-<li>Led DevOps & QA collaboration using Scrum & Kanban.</li>
+<li>Led 3 Agile squads delivering enterprise programs across UK, US & Middle East.</li>
+<li>Improved sprint velocity by 25% through Agile coaching.</li>
+<li>Reduced defect leakage by 40% via CI/CD implementation.</li>
+<li>Managed $2M+ portfolio with executive stakeholder reporting.</li>
 </ul>
+</div>
 
-<h4>Programmer – Directorate of Treasuries (2015–2021)</h4>
+<div class="card-modern">
+<h5>Full Stack Developer Lead – ZH Healthcare (2021–2022)</h5>
 <ul>
-<li>Led digital transformation for IFMS Government projects.</li>
-<li>Ensured regulatory compliance & fiscal governance alignment.</li>
+<li>Delivered HIPAA-compliant EHR platform (BlueHR).</li>
+<li>Improved performance by 30% through backend optimization.</li>
+<li>Led DevOps & QA integration using Scrum and Kanban.</li>
 </ul>
+</div>
+
+<div class="card-modern">
+<h5>Programmer – Directorate of Treasuries (2015–2021)</h5>
+<ul>
+<li>Led public finance digital transformation initiatives.</li>
+<li>Ensured regulatory compliance and fiscal governance.</li>
+<li>Delivered IFMS modules aligned with state-level operations.</li>
+</ul>
+</div>
 
 </div>
 </section>
 
-<hr>
-
-<!-- EDUCATION -->
-<section id="education" class="resume-section">
-<div class="resume-section-content">
-<h2 class="section-title">Education</h2>
-
-<p><strong>MBA – Human Resources</strong> | IGNOU</p>
-<p><strong>B.Tech – Computer Science</strong> | Kerala University</p>
-<p><strong>Diploma – Computer Engineering</strong> | Technical Board Kerala</p>
-
-</div>
-</section>
-
-<hr>
 
 <!-- SKILLS -->
-<section id="skills" class="resume-section">
-<div class="resume-section-content">
-<h2 class="section-title">Core Skills</h2>
+<section class="section bg-white">
+<div class="container-custom">
 
-<ul>
-<li>Scrum, Kanban, SAFe</li>
-<li>Agile Coaching & PI Planning</li>
-<li>JIRA, Confluence, Azure DevOps</li>
-<li>AWS, GCP, Azure</li>
-<li>CI/CD, Docker, DevOps</li>
-<li>Stakeholder & Vendor Management</li>
-<li>PHP (Laravel), MySQL, PostgreSQL</li>
-</ul>
+<h2>Core Skills</h2>
+
+<div>
+<span class="badge-skill">Scrum</span>
+<span class="badge-skill">Kanban</span>
+<span class="badge-skill">SAFe</span>
+<span class="badge-skill">Agile Coaching</span>
+<span class="badge-skill">JIRA</span>
+<span class="badge-skill">Azure DevOps</span>
+<span class="badge-skill">AWS</span>
+<span class="badge-skill">GCP</span>
+<span class="badge-skill">CI/CD</span>
+<span class="badge-skill">Stakeholder Management</span>
+<span class="badge-skill">Enterprise Governance</span>
+</div>
 
 </div>
 </section>
 
-<hr>
 
-<!-- AWARDS -->
-<section id="awards" class="resume-section">
-<div class="resume-section-content">
-<h2 class="section-title">Awards & Certifications</h2>
+<!-- EDUCATION -->
+<section class="section">
+<div class="container-custom">
 
-<ul>
-<li>Certified ScrumMaster (CSM)</li>
-<li>Infosys REAP Award (2024–2025)</li>
-<li>Kerala Government Honorarium – Budget System Enhancement</li>
-<li>CCNA Certified</li>
-</ul>
+<h2>Education</h2>
+
+<div class="card-modern">
+<p><strong>MBA – Human Resources</strong> | IGNOU</p>
+<p><strong>B.Tech – Computer Science</strong> | Kerala University</p>
+<p><strong>Diploma – Computer Engineering</strong></p>
+</div>
 
 </div>
 </section>
 
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
+© 2026 Anshus Noufiya A K | Agile Leadership Portfolio
+</footer>
+
 </body>
 </html>
