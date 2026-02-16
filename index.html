@@ -8,148 +8,175 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+body{
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
 }
 
-/* NAVIGATION */
-nav {
-    position: absolute;
-    top: 30px;
-    right: 60px;
-    z-index: 10;
+/* ===== NAVIGATION ===== */
+
+nav{
+    position:absolute;
+    top:30px;
+    right:60px;
+    z-index:100;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    margin-left: 30px;
-    font-weight: 500;
-    font-size: 14px;
+nav a{
+    text-decoration:none;
+    color:#111;
+    margin-left:35px;
+    font-size:14px;
+    font-weight:500;
 }
 
-.contact-btn {
-    background: white;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 600;
+.contact-btn{
+    background:#111;
+    color:#fff;
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:600;
 }
 
-/* HERO CONTAINER */
-.hero {
-    display: flex;
-    height: 100vh;
+.contact-btn:hover{
+    background:#2563eb;
+    color:white;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero{
+    display:flex;
+    height:100vh;
 }
 
 /* LEFT SIDE */
-.hero-left {
-    width: 55%;
-    background: #f4f4f4;
-    padding: 120px 100px;
-    position: relative;
+
+.hero-left{
+    width:60%;
+    background:#f4f4f4;
+    padding:140px 120px;
+    position:relative;
 }
 
-.hero-left h4 {
-    font-weight: 500;
-    color: #555;
-    margin-bottom: 20px;
+.hero-left h4{
+    font-size:20px;
+    font-weight:500;
+    color:#666;
+    margin-bottom:25px;
 }
 
-.hero-left h1 {
-    font-size: 60px;
-    font-weight: 800;
-    margin-bottom: 20px;
+.hero-left h1{
+    font-size:70px;
+    font-weight:800;
+    margin-bottom:25px;
 }
 
-.hero-left p {
-    color: #777;
-    font-size: 18px;
+.hero-left p{
+    font-size:20px;
+    color:#555;
 }
 
 /* SOCIAL ICONS */
-.socials {
-    margin-top: 40px;
+
+.socials{
+    margin-top:45px;
 }
 
-.socials a {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    background: #e0e0e0;
-    margin-right: 15px;
-    text-align: center;
-    line-height: 45px;
-    border-radius: 8px;
-    color: black;
-    text-decoration: none;
-    transition: 0.3s;
+.socials a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:55px;
+    height:55px;
+    background:#e6e6e6;
+    margin-right:20px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+    transition:0.3s;
 }
 
-.socials a:hover {
-    background: #2563eb;
-    color: white;
+.socials a:hover{
+    background:#2563eb;
+    color:white;
+    transform:translateY(-4px);
+}
+
+/* DIAGONAL DIVIDER */
+
+.hero-left::after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:-120px;
+    width:240px;
+    height:100%;
+    background:#111;
+    transform:skewX(-12deg);
 }
 
 /* RIGHT SIDE */
-.hero-right {
-    width: 45%;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+
+.hero-right{
+    width:40%;
+    background:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-/* Diagonal Effect */
-.hero-left::after {
-    content: '';
-    position: absolute;
-    right: -100px;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    background: black;
-    transform: skewX(-10deg);
-}
-
-.hero-right img {
-    width: 75%;
-    max-width: 450px;
+.hero-right img{
+    width:85%;
+    max-width:500px;
 }
 
 /* RESPONSIVE */
-@media(max-width: 992px) {
-    .hero {
-        flex-direction: column;
-    }
 
-    .hero-left,
-    .hero-right {
-        width: 100%;
-        height: auto;
-    }
+@media(max-width:992px){
 
-    .hero-left::after {
-        display: none;
-    }
-
-    nav {
-        right: 20px;
-    }
+.hero{
+    flex-direction:column;
 }
+
+.hero-left,
+.hero-right{
+    width:100%;
+    height:auto;
+}
+
+.hero-left::after{
+    display:none;
+}
+
+nav{
+    right:20px;
+}
+
+.hero-left{
+    padding:80px 30px;
+}
+
+.hero-left h1{
+    font-size:40px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
     <a href="#">About</a>
     <a href="#">Skills</a>
@@ -157,28 +184,27 @@ nav a {
     <a href="#" class="contact-btn">Contact Me</a>
 </nav>
 
-<div class="hero">
+<!-- HERO -->
+<section class="hero">
 
-    <!-- LEFT -->
     <div class="hero-left">
         <h4>Hi, I am</h4>
         <h1>Anshus Noufiya</h1>
         <p>Certified Scrum Master / Agile Coach / Technology Lead</p>
 
         <div class="socials">
-            <a href="mailto:anshusnoufiya.ak@gmail.com">@</a>
+            <a href="mailto:anshusnoufiya.ak@gmail.com">✉</a>
             <a href="https://github.com/AnshusNoufiyaAK">GH</a>
             <a href="https://www.linkedin.com/in/anshus-noufiya-ak">IN</a>
         </div>
     </div>
 
-    <!-- RIGHT -->
     <div class="hero-right">
-        <!-- Replace with your own profile image -->
+        <!-- Replace with your generated image file -->
         <img src="assets/img/profile.png" alt="Anshus Noufiya">
     </div>
 
-</div>
+</section>
 
 </body>
 </html>
