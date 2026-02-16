@@ -3,64 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anshus Noufiya | Scrum Master | Agile Coach</title>
+<title>Anshus Noufiya</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Inter',sans-serif;
-    background:#ffffff;
-    color:#111;
+    font-family:'Inter', sans-serif;
+    overflow:hidden;
 }
 
-/* ================= NAV ================= */
-
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    padding:20px 8%;
-    background:#f3f3f3;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-}
-
-nav a{
-    text-decoration:none;
-    color:#111;
-    margin-left:30px;
-    font-weight:500;
-}
-
-.contact-btn{
-    background:#111;
-    color:#fff;
-    padding:10px 20px;
-    border-radius:25px;
-}
-
-/* ================= HERO ================= */
+/* ================= HERO CONTAINER ================= */
 
 .hero{
-    display:flex;
+    position:relative;
     height:100vh;
-    padding-top:100px;
+    width:100%;
+    display:flex;
 }
 
+/* ================= LEFT SIDE (WHITE) ================= */
+
 .hero-left{
-    width:60%;
-    background:#f3f3f3;
-    padding:0 8%;
+    width:65%;
+    background:#f4f4f4;
+    padding-left:8%;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -68,32 +41,59 @@ nav a{
     z-index:2;
 }
 
+/* NAVIGATION */
+
+.nav{
+    position:absolute;
+    top:40px;
+    left:8%;
+    display:flex;
+    gap:40px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#222;
+    font-weight:500;
+}
+
+.contact-btn{
+    background:#111;
+    color:#fff;
+    padding:10px 24px;
+    border-radius:25px;
+}
+
+/* TEXT CONTENT */
+
 .hero-left h4{
-    font-size:20px;
-    color:#666;
-    margin-bottom:20px;
+    font-size:22px;
+    color:#777;
+    margin-bottom:25px;
 }
 
 .hero-left h1{
-    font-size:70px;
+    font-size:72px;
     font-weight:800;
     margin-bottom:20px;
 }
 
 .hero-left p{
     font-size:20px;
-    color:#555;
+    color:#666;
 }
 
-.socials{
-    margin-top:40px;
+/* SOCIAL ICONS */
+
+.social{
+    margin-top:50px;
     display:flex;
-    gap:20px;
+    gap:25px;
 }
 
-.socials a{
-    width:50px;
-    height:50px;
+.social a{
+    width:60px;
+    height:60px;
     background:#e6e6e6;
     border-radius:50%;
     display:flex;
@@ -101,12 +101,13 @@ nav a{
     justify-content:center;
     text-decoration:none;
     color:#111;
+    font-weight:600;
 }
 
-/* RIGHT SIDE */
+/* ================= RIGHT SIDE (BLACK) ================= */
 
 .hero-right{
-    width:40%;
+    width:35%;
     background:#0e0e0e;
     position:relative;
     display:flex;
@@ -114,101 +115,36 @@ nav a{
     justify-content:center;
 }
 
-/* DIAGONAL */
+/* DIAGONAL CUT */
 
 .hero-right::before{
     content:"";
     position:absolute;
-    left:-140px;
-    width:280px;
+    left:-160px;
+    top:0;
+    width:320px;
     height:100%;
     background:#0e0e0e;
     transform:skewX(-12deg);
 }
 
-/* IMAGE 3D EFFECT */
+/* IMAGE */
 
 .hero-right img{
     position:relative;
-    height:720px;
-    z-index:2;
-    transform:translateY(10px);
-    filter:drop-shadow(0px 25px 35px rgba(0,0,0,0.4));
-}
-
-/* ================= SECTIONS ================= */
-
-section{
-    padding:100px 8%;
-}
-
-section h2{
-    font-size:36px;
-    margin-bottom:40px;
-}
-
-/* ABOUT */
-
-.about p{
-    font-size:18px;
-    line-height:1.8;
-    max-width:800px;
-}
-
-/* SKILLS */
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-}
-
-.skill-card{
-    background:#f5f5f5;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    font-weight:600;
-}
-
-/* PORTFOLIO */
-
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.portfolio-card{
-    background:#ffffff;
-    border:1px solid #eee;
-    padding:25px;
-    border-radius:10px;
-    transition:0.3s;
-}
-
-.portfolio-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.08);
-}
-
-/* CONTACT */
-
-.contact{
-    background:#0e0e0e;
-    color:#fff;
-    text-align:center;
-}
-
-.contact a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
+    z-index:3;
+    height:780px;
+    object-fit:contain;
+    filter:drop-shadow(0px 25px 40px rgba(0,0,0,0.4));
 }
 
 /* ================= MOBILE ================= */
 
 @media(max-width:992px){
+
+body{
+    overflow:auto;
+}
 
 .hero{
     flex-direction:column;
@@ -221,7 +157,15 @@ section h2{
 }
 
 .hero-left{
-    padding:60px 8%;
+    padding:100px 30px;
+}
+
+.nav{
+    position:relative;
+    left:0;
+    top:0;
+    margin-bottom:40px;
+    flex-wrap:wrap;
 }
 
 .hero-left h1{
@@ -230,7 +174,7 @@ section h2{
 
 .hero-right{
     align-items:center;
-    padding:40px 0;
+    padding-top:40px;
 }
 
 .hero-right::before{
@@ -248,79 +192,34 @@ section h2{
 
 <body>
 
-<nav>
-    <div><strong>Anshus Noufiya</strong></div>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact" class="contact-btn">Contact</a>
-    </div>
-</nav>
-
-<!-- HERO -->
 <section class="hero">
+
     <div class="hero-left">
+
+        <div class="nav">
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Portfolio</a>
+            <a href="#" class="contact-btn">Contact Me</a>
+        </div>
+
         <h4>Hi, I am</h4>
         <h1>Anshus Noufiya</h1>
         <p>Certified Scrum Master / Agile Coach / Technology Lead</p>
 
-        <div class="socials">
+        <div class="social">
             <a href="mailto:anshusnoufiya.ak@gmail.com">✉</a>
-            <a href="https://linkedin.com" target="_blank">IN</a>
-            <a href="https://github.com" target="_blank">GH</a>
+            <a href="#">FB</a>
+            <a href="#">IN</a>
         </div>
+
     </div>
 
     <div class="hero-right">
         <img src="assets/img/profile.png" alt="Anshus Noufiya">
     </div>
+
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-    Technology Lead and Certified Scrum Master with 11+ years of experience delivering 
-    enterprise-scale solutions across Healthcare, Telecom, Banking and Government sectors.
-    Expert in Agile transformations, distributed team leadership, stakeholder management, 
-    and product delivery excellence.
-    </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-card">Agile & Scrum</div>
-        <div class="skill-card">SAFe Framework</div>
-        <div class="skill-card">JIRA & Confluence</div>
-        <div class="skill-card">Team Leadership</div>
-        <div class="skill-card">Stakeholder Management</div>
-        <div class="skill-card">Cloud & DevOps Basics</div>
-    </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-        <div class="portfolio-card">
-            <h3>BlueHR – EHR Platform</h3>
-            <p>Enterprise Electronic Health Record system implemented across hospitals.</p>
-        </div>
-        <div class="portfolio-card">
-            <h3>Telecom SCM Tool</h3>
-            <p>Agile delivery transformation for telecom infrastructure management.</p>
-        </div>
-        <div class="portfolio-card">
-            <h3>Insurance Digital Portal</h3>
-            <p>Scaled Agile implementation for digital insurance processing platform.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <h2>Let’s Connect</h2>
-    <p>Email: <a href="
+</body>
+</html>
