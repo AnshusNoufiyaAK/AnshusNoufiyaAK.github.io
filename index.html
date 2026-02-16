@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -16,35 +17,31 @@
 
 body{
     font-family:'Inter',sans-serif;
-    overflow:hidden; /* remove unwanted scroll */
+    overflow-x:hidden;
 }
 
-/* ===== NAV ===== */
+/* ================= NAVIGATION ================= */
 
 nav{
     position:absolute;
     top:40px;
-    right:80px;
-    z-index:10;
+    left:8%;
+    z-index:100;
 }
 
 nav a{
     text-decoration:none;
-    color:#333;
-    margin-left:40px;
+    color:#222;
+    margin-right:35px;
     font-size:15px;
     font-weight:500;
-}
-
-nav a:hover{
-    color:#000;
 }
 
 .contact-btn{
     background:#111;
     color:#fff;
-    padding:12px 26px;
-    border-radius:30px;
+    padding:10px 22px;
+    border-radius:25px;
     font-weight:600;
 }
 
@@ -52,37 +49,37 @@ nav a:hover{
     background:#2563eb;
 }
 
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 
 .hero{
     display:flex;
     height:100vh;
+    position:relative;
 }
 
-/* LEFT SIDE */
+/* LEFT WHITE SIDE */
 
 .hero-left{
-    width:60%;
-    background:#f2f2f2;
-    padding:160px 140px;
-    position:relative;
+    width:65%;
+    background:#f3f3f3;
+    padding:0 8%;
     display:flex;
     flex-direction:column;
     justify-content:center;
+    position:relative;
+    z-index:2;
 }
 
 .hero-left h4{
     font-size:20px;
-    font-weight:500;
     color:#777;
     margin-bottom:25px;
 }
 
 .hero-left h1{
-    font-size:72px;
+    font-size:70px;
     font-weight:800;
     margin-bottom:25px;
-    color:#111;
 }
 
 .hero-left p{
@@ -90,19 +87,19 @@ nav a:hover{
     color:#666;
 }
 
-/* SOCIALS */
+/* SOCIAL */
 
 .socials{
-    margin-top:50px;
+    margin-top:45px;
     display:flex;
     gap:20px;
 }
 
 .socials a{
-    width:60px;
-    height:60px;
+    width:55px;
+    height:55px;
+    background:#e6e6e6;
     border-radius:50%;
-    background:#e4e4e4;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -115,44 +112,54 @@ nav a:hover{
 .socials a:hover{
     background:#111;
     color:#fff;
-    transform:translateY(-5px);
 }
 
-/* DIAGONAL BLACK SIDE */
+/* RIGHT DARK SIDE */
 
-.hero-left::after{
+.hero-right{
+    width:35%;
+    background:#0e0e0e;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+}
+
+/* DIAGONAL OVERLAY */
+
+.hero-right::before{
     content:"";
     position:absolute;
+    left:-120px;
     top:0;
-    right:-120px;
     width:240px;
     height:100%;
     background:#0e0e0e;
     transform:skewX(-12deg);
+    z-index:1;
 }
 
-/* RIGHT SIDE */
-
-.hero-right{
-    width:40%;
-    background:#0e0e0e;
-    display:flex;
-    align-items:flex-end;  /* align image bottom */
-    justify-content:center;
-    overflow:hidden;
-}
+/* IMAGE */
 
 .hero-right img{
-    height:900px;  /* EXACT requested height */
+    position:relative;
+    z-index:2;
+    height:750px; /* reduced height */
     object-fit:contain;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= MOBILE ================= */
 
 @media(max-width:992px){
 
-body{
-    overflow:auto;
+nav{
+    position:relative;
+    left:0;
+    top:0;
+    padding:20px;
+    background:#f3f3f3;
+    display:flex;
+    justify-content:space-between;
 }
 
 .hero{
@@ -166,26 +173,25 @@ body{
 }
 
 .hero-left{
-    padding:100px 30px;
+    padding:80px 30px;
 }
 
-.hero-left::after{
-    display:none;
+.hero-left h1{
+    font-size:42px;
 }
 
 .hero-right{
     align-items:center;
-    padding-top:40px;
+    padding:40px 0;
+}
+
+.hero-right::before{
+    display:none;
 }
 
 .hero-right img{
     height:auto;
     width:80%;
-}
-
-nav{
-    right:20px;
-    top:20px;
 }
 
 }
@@ -196,9 +202,11 @@ nav{
 <body>
 
 <nav>
-    <a href="#">About</a>
-    <a href="#">Skills</a>
-    <a href="portfolio.html">Portfolio</a>
+    <div>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="portfolio.html">Portfolio</a>
+    </div>
     <a href="#" class="contact-btn">Contact Me</a>
 </nav>
 
