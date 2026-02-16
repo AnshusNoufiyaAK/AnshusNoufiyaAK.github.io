@@ -19,7 +19,7 @@ body{
     overflow:hidden;
 }
 
-/* ================= HERO CONTAINER ================= */
+/* ================= HERO ================= */
 
 .hero{
     position:relative;
@@ -28,10 +28,10 @@ body{
     display:flex;
 }
 
-/* ================= LEFT SIDE (WHITE) ================= */
+/* LEFT WHITE */
 
 .hero-left{
-    width:65%;
+    width:60%;
     background:#f4f4f4;
     padding-left:8%;
     display:flex;
@@ -41,7 +41,29 @@ body{
     z-index:2;
 }
 
-/* NAVIGATION */
+/* RIGHT BLACK */
+
+.hero-right{
+    width:40%;
+    background:#0e0e0e;
+    position:relative;
+}
+
+/* ================= DIAGONAL CROSS ================= */
+
+.hero::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:55%;
+    width:300px;
+    height:100%;
+    background:#0e0e0e;
+    transform:skewX(-15deg);
+    z-index:1;
+}
+
+/* ================= NAV ================= */
 
 .nav{
     position:absolute;
@@ -64,7 +86,7 @@ body{
     border-radius:25px;
 }
 
-/* TEXT CONTENT */
+/* ================= TEXT ================= */
 
 .hero-left h4{
     font-size:22px;
@@ -83,59 +105,16 @@ body{
     color:#666;
 }
 
-/* SOCIAL ICONS */
+/* ================= IMAGE ================= */
 
-.social{
-    margin-top:50px;
-    display:flex;
-    gap:25px;
-}
-
-.social a{
-    width:60px;
-    height:60px;
-    background:#e6e6e6;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    color:#111;
-    font-weight:600;
-}
-
-/* ================= RIGHT SIDE (BLACK) ================= */
-
-.hero-right{
-    width:35%;
-    background:#0e0e0e;
-    position:relative;
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-}
-
-/* DIAGONAL CUT */
-
-.hero-right::before{
-    content:"";
+.profile-img{
     position:absolute;
-    left:-160px;
-    top:0;
-    width:320px;
-    height:100%;
-    background:#0e0e0e;
-    transform:skewX(-12deg);
-}
-
-/* IMAGE */
-
-.hero-right img{
-    position:relative;
-    z-index:3;
+    bottom:0;
+    left:60%;
+    transform:translateX(-40%);
     height:780px;
-    object-fit:contain;
-    filter:drop-shadow(0px 25px 40px rgba(0,0,0,0.4));
+    z-index:3;
+    filter:drop-shadow(0px 30px 40px rgba(0,0,0,0.4));
 }
 
 /* ================= MOBILE ================= */
@@ -156,8 +135,26 @@ body{
     width:100%;
 }
 
+.hero::after{
+    display:none;
+}
+
+.profile-img{
+    position:relative;
+    left:0;
+    transform:none;
+    height:auto;
+    width:80%;
+    display:block;
+    margin:40px auto 0;
+}
+
 .hero-left{
     padding:100px 30px;
+}
+
+.hero-left h1{
+    font-size:42px;
 }
 
 .nav{
@@ -166,24 +163,6 @@ body{
     top:0;
     margin-bottom:40px;
     flex-wrap:wrap;
-}
-
-.hero-left h1{
-    font-size:42px;
-}
-
-.hero-right{
-    align-items:center;
-    padding-top:40px;
-}
-
-.hero-right::before{
-    display:none;
-}
-
-.hero-right img{
-    height:auto;
-    width:80%;
 }
 
 }
@@ -207,17 +186,12 @@ body{
         <h1>Anshus Noufiya</h1>
         <p>Certified Scrum Master / Agile Coach / Technology Lead</p>
 
-        <div class="social">
-            <a href="mailto:anshusnoufiya.ak@gmail.com">✉</a>
-            <a href="#">FB</a>
-            <a href="#">IN</a>
-        </div>
-
     </div>
 
-    <div class="hero-right">
-        <img src="assets/img/profile.png" alt="Anshus Noufiya">
-    </div>
+    <div class="hero-right"></div>
+
+    <!-- IMAGE BETWEEN WHITE & BLACK -->
+    <img src="assets/img/profile.png" class="profile-img" alt="Anshus Noufiya">
 
 </section>
 
