@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anshus - Jira Style Bio Board</title>
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #f4f5f7;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* Jira top header */
+    .jira-header {
+        background-color: #0747A6;
+        color: white;
+        padding: 14px 24px;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    /* Board scroll area */
+    .board-wrapper {
+        overflow-x: auto;
+        padding: 20px;
+    }
+
+    .jira-column {
+        background-color: #EBECF0;
+        border-radius: 6px;
+        padding: 12px;
+        min-width: 300px;
+        max-height: 80vh;
+    }
+
+    .jira-column-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #172B4D;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+    }
+
+    .jira-card {
+        background: #ffffff;
+        border-radius: 4px;
+        padding: 10px 12px;
+        margin-bottom: 10px;
+        box-shadow: 0 1px 2px rgba(9, 30, 66, 0.15);
+        font-size: 13px;
+        color: #172B4D;
+        transition: 0.2s ease;
+    }
+
+    .jira-card:hover {
+        box-shadow: 0 4px 8px rgba(9, 30, 66, 0.25);
+        cursor: pointer;
+    }
+
+    .issue-key {
+        font-size: 11px;
+        font-weight: 600;
+        color: #5E6C84;
+        margin-bottom: 4px;
+    }
+
+    .badge-jira {
+        font-size: 10px;
+        font-weight: 500;
+        padding: 4px 6px;
+        border-radius: 3px;
+    }
+
+    .blue { background-color: #0052CC; }
+    .green { background-color: #36B37E; }
+    .orange { background-color: #FF991F; }
+    .purple { background-color: #6554C0; }
+
+</style>
+</head>
+
+<body>
+
+<div class="jira-header">
+    ANSHUS-001 | Personal & Professional Scrum Board
+</div>
+
+<div class="board-wrapper">
+    <div class="d-flex gap-4">
+
+        <!-- Backlog -->
+        <div class="jira-column">
+            <div class="jira-column-title">Backlog</div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-11</div>
+                Technology Lead with 11+ years delivering scalable systems.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira blue">Leadership</span>
+                </div>
+            </div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-12</div>
+                Agile mindset. Continuous improvement mode ON.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira purple">Scrum</span>
+                </div>
+            </div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-13</div>
+                Enthusiastic lifelong learner upgrading every sprint.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira orange">Growth</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="jira-column">
+            <div class="jira-column-title">In Progress</div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-21</div>
+                Building with PHP, Yii2, React & AWS.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira blue">Full Stack</span>
+                </div>
+            </div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-22</div>
+                Coaching teams & facilitating sprint delivery.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira purple">Agile Coach</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Done -->
+        <div class="jira-column">
+            <div class="jira-column-title">Done</div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-31</div>
+                Multiple product launches with measurable impact.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira green">Impact</span>
+                </div>
+            </div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-32</div>
+                Optimized legacy systems & improved performance.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira blue">Optimization</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Power-Ups -->
+        <div class="jira-column">
+            <div class="jira-column-title">Personal Power-Ups</div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-41</div>
+                🎨 Drawing ideas before architecting solutions.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira purple">Creativity</span>
+                </div>
+            </div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-42</div>
+                🎧 Debugging with music for deep focus mode.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira blue">Focus</span>
+                </div>
+            </div>
+
+            <div class="jira-card">
+                <div class="issue-key">ANS-43</div>
+                👩‍💻 Super Dooper Techy Mom balancing sprints & school runs.
+                <div class="mt-2">
+                    <span class="badge text-white badge-jira green">Life Balance</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
