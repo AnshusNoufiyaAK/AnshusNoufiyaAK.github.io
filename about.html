@@ -3,197 +3,221 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anshus - Jira Style Bio Board</title>
+<title>Anshus | Agile Scrum Board</title>
 
-<!-- Bootstrap 5 CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-    body {
-        background-color: #f4f5f7;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
+body {
+    background-color: #f4f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
 
-    /* Jira top header */
-    .jira-header {
-        background-color: #0747A6;
-        color: white;
-        padding: 14px 24px;
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-    }
+/* HEADER */
+.jira-header {
+    background: linear-gradient(90deg, #172B4D, #505F79);
+    color: white;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 600;
+}
 
-    /* Board scroll area */
-    .board-wrapper {
-        overflow-x: auto;
-        padding: 20px;
-    }
+/* BOARD */
+.board-wrapper {
+    overflow-x: auto;
+    padding: 20px;
+}
 
+.jira-column {
+    background-color: #EBECF0;
+    border-radius: 6px;
+    padding: 12px;
+    min-width: 300px;
+    max-height: 85vh;
+}
+
+/* COLUMN TITLE */
+.jira-column-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #172B4D;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* CARD */
+.jira-card {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(9, 30, 66, 0.15);
+    font-size: 13px;
+    transition: 0.2s ease;
+}
+
+.jira-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(9, 30, 66, 0.25);
+}
+
+/* ISSUE KEY */
+.issue-key {
+    font-size: 11px;
+    font-weight: 600;
+    color: #5E6C84;
+    margin-bottom: 4px;
+}
+
+/* BADGES */
+.badge-jira {
+    font-size: 10px;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.blue { background-color: #8f96a3; }
+.green { background-color: #36B37E; }
+.orange { background-color: #FF991F; }
+.purple { background-color: #6554C0; }
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
     .jira-column {
-        background-color: #EBECF0;
-        border-radius: 6px;
-        padding: 12px;
-        min-width: 300px;
-        max-height: 80vh;
+        min-width: 260px;
     }
-
-    .jira-column-title {
-        font-size: 14px;
-        font-weight: 600;
-        color: #172B4D;
-        margin-bottom: 12px;
-        text-transform: uppercase;
-    }
-
-    .jira-card {
-        background: #ffffff;
-        border-radius: 4px;
-        padding: 10px 12px;
-        margin-bottom: 10px;
-        box-shadow: 0 1px 2px rgba(9, 30, 66, 0.15);
-        font-size: 13px;
-        color: #172B4D;
-        transition: 0.2s ease;
-    }
-
-    .jira-card:hover {
-        box-shadow: 0 4px 8px rgba(9, 30, 66, 0.25);
-        cursor: pointer;
-    }
-
-    .issue-key {
-        font-size: 11px;
-        font-weight: 600;
-        color: #5E6C84;
-        margin-bottom: 4px;
-    }
-
-    .badge-jira {
-        font-size: 10px;
-        font-weight: 500;
-        padding: 4px 6px;
-        border-radius: 3px;
-    }
-
-    .blue { background-color: #0052CC; }
-    .green { background-color: #36B37E; }
-    .orange { background-color: #FF991F; }
-    .purple { background-color: #6554C0; }
-
+}
 </style>
 </head>
 
 <body>
 
 <div class="jira-header">
-    ANSHUS-001 | Personal & Professional Scrum Board
+    ANSHUS-001 | Agile Scrum Master Board | Dubai UAE
 </div>
 
 <div class="board-wrapper">
-    <div class="d-flex gap-4">
+<div class="d-flex gap-4">
 
-        <!-- Backlog -->
-        <div class="jira-column">
-            <div class="jira-column-title">Backlog</div>
+<!-- EPIC / ABOUT -->
+<div class="jira-column">
+    <div class="jira-column-title">Epic – About Me</div>
 
-            <div class="jira-card">
-                <div class="issue-key">ANS-11</div>
-                Technology Lead with 11+ years delivering scalable systems.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira blue">Leadership</span>
-                </div>
-            </div>
-
-            <div class="jira-card">
-                <div class="issue-key">ANS-12</div>
-                Agile mindset. Continuous improvement mode ON.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira purple">Scrum</span>
-                </div>
-            </div>
-
-            <div class="jira-card">
-                <div class="issue-key">ANS-13</div>
-                Enthusiastic lifelong learner upgrading every sprint.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira orange">Growth</span>
-                </div>
-            </div>
+    <div class="jira-card">
+        <div class="issue-key">ANS-01</div>
+        Certified Scrum Master with 12+ years delivering enterprise solutions across UAE, India & global clients.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira purple">Agile Leader</span>
         </div>
-
-        <!-- In Progress -->
-        <div class="jira-column">
-            <div class="jira-column-title">In Progress</div>
-
-            <div class="jira-card">
-                <div class="issue-key">ANS-21</div>
-                Building with PHP, Yii2, React & AWS.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira blue">Full Stack</span>
-                </div>
-            </div>
-
-            <div class="jira-card">
-                <div class="issue-key">ANS-22</div>
-                Coaching teams & facilitating sprint delivery.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira purple">Agile Coach</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Done -->
-        <div class="jira-column">
-            <div class="jira-column-title">Done</div>
-
-            <div class="jira-card">
-                <div class="issue-key">ANS-31</div>
-                Multiple product launches with measurable impact.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira green">Impact</span>
-                </div>
-            </div>
-
-            <div class="jira-card">
-                <div class="issue-key">ANS-32</div>
-                Optimized legacy systems & improved performance.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira blue">Optimization</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Personal Power-Ups -->
-        <div class="jira-column">
-            <div class="jira-column-title">Personal Power-Ups</div>
-
-            <div class="jira-card">
-                <div class="issue-key">ANS-41</div>
-                🎨 Drawing ideas before architecting solutions.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira purple">Creativity</span>
-                </div>
-            </div>
-
-            <div class="jira-card">
-                <div class="issue-key">ANS-42</div>
-                🎧 Debugging with music for deep focus mode.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira blue">Focus</span>
-                </div>
-            </div>
-
-            <div class="jira-card">
-                <div class="issue-key">ANS-43</div>
-                👩‍💻 Super Dooper Techy Mom balancing sprints & school runs.
-                <div class="mt-2">
-                    <span class="badge text-white badge-jira green">Life Balance</span>
-                </div>
-            </div>
-        </div>
-
     </div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-02</div>
+        Expertise in Agile Transformation, Scrum, Kanban, SAFe, and DevOps CI/CD delivery.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira blue">Scrum</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- BACKLOG -->
+<div class="jira-column">
+    <div class="jira-column-title">Backlog</div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-11</div>
+        Define product roadmap aligned with UAE enterprise digital transformation goals.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira blue">Strategy</span>
+        </div>
+    </div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-12</div>
+        Build high-performing Agile teams with strong collaboration.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira purple">Leadership</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- IN PROGRESS -->
+<div class="jira-column">
+    <div class="jira-column-title">In Progress</div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-21</div>
+        Facilitating Scrum ceremonies & sprint delivery using Jira & Azure DevOps.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira purple">Scrum Master</span>
+        </div>
+    </div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-22</div>
+        Coaching teams on Agile best practices & continuous improvement.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira orange">Coaching</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- DONE -->
+<div class="jira-column">
+    <div class="jira-column-title">Done</div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-31</div>
+        Improved sprint velocity by 25% across distributed teams.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira green">Impact</span>
+        </div>
+    </div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-32</div>
+        Reduced defect leakage by 40% using CI/CD automation.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira green">Quality</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- PERSONAL -->
+<div class="jira-column">
+    <div class="jira-column-title">Personal Power-Ups</div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-41</div>
+        🎨 Creative thinker – visualizing solutions before building.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira purple">Creativity</span>
+        </div>
+    </div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-42</div>
+        🎧 Music-driven focus mode for deep problem solving.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira blue">Focus</span>
+        </div>
+    </div>
+
+    <div class="jira-card">
+        <div class="issue-key">ANS-43</div>
+        👩‍💻 Techy Mom balancing Agile sprints & life efficiently.
+        <div class="mt-2">
+            <span class="badge text-white badge-jira green">Balance</span>
+        </div>
+    </div>
+
+</div>
+
+</div>
 </div>
 
 </body>
