@@ -5,116 +5,132 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anshus Noufiya | Executive Portfolio</title>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
---primary:#2563eb;
---accent:#0ea5e9;
---bg:#f4f7fb;
---card:#ffffff;
---text:#1e293b;
+--primary:#8f96a3;
+--dark:#0b0f19;
+--light:#f8fafc;
+--card:rgba(255,255,255,0.7);
+--glass:blur(16px);
+--text:#111827;
 }
 
 body.dark{
---bg:#0f172a;
---card:#1e293b;
---text:#f1f5f9;
+--light:#0b0f19;
+--card:rgba(30,41,59,0.6);
+--text:#e2e8f0;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-margin:0;
-font-family:'Segoe UI',sans-serif;
-background:var(--bg);
+background:linear-gradient(120deg,#f1f5f9,#e2e8f0);
 color:var(--text);
 transition:0.4s;
 overflow-x:hidden;
 }
 
-canvas{
-position:fixed;
-top:0;
-left:0;
-z-index:-1;
-}
-
 /* HERO */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2070');
-background-size:cover;
-background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-color:white;
 padding:20px;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,var(--primary),transparent);
+top:-150px;
+right:-150px;
+opacity:0.25;
 }
 
 .hero h1{
 font-size:52px;
-margin-bottom:15px;
+font-weight:700;
+letter-spacing:1px;
 }
 
 .hero p{
-max-width:750px;
+margin-top:15px;
 font-size:18px;
+max-width:700px;
+opacity:0.8;
 }
 
 /* BUTTON */
 .btn{
 margin-top:25px;
 padding:12px 28px;
-border:none;
 border-radius:30px;
-background:var(--primary);
+background:linear-gradient(135deg,#8f96a3,#6b7280);
 color:white;
-cursor:pointer;
 text-decoration:none;
 font-weight:500;
 transition:0.3s;
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
 
 .btn:hover{
-background:#1d4ed8;
+transform:translateY(-3px);
 }
 
 /* SECTION */
 .section{
-padding:80px 20px;
-max-width:1100px;
+padding:90px 20px;
+max-width:1200px;
 margin:auto;
 }
 
 .section h2{
 text-align:center;
-margin-bottom:50px;
 font-size:32px;
+margin-bottom:50px;
+}
+
+/* GLASS CARD */
+.card{
+background:var(--card);
+backdrop-filter:var(--glass);
+border-radius:20px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* KPI */
 .kpi-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
 .kpi{
-background:var(--card);
-padding:35px;
-border-radius:18px;
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+padding:40px;
+border-radius:20px;
+background:var(--card);
+backdrop-filter:var(--glass);
 }
 
 .kpi h2{
-font-size:40px;
-color:var(--primary);
-margin-bottom:10px;
+font-size:42px;
+color:#6b7280;
 }
 
 /* SKILLS */
@@ -125,73 +141,75 @@ gap:30px;
 }
 
 .skill-card{
-background:var(--card);
 padding:30px;
 border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-opacity:0;
-transform:translateY(40px);
+background:var(--card);
+backdrop-filter:var(--glass);
+transition:0.4s;
+}
+
+.skill-card:hover{
+transform:translateY(-8px);
 }
 
 .skill-card h3{
-margin-bottom:20px;
-}
-
-.skill-list{
-list-style:none;
-padding:0;
+margin-bottom:15px;
 }
 
 .skill-list li{
-display:flex;
-align-items:center;
-gap:12px;
-padding:8px 0;
-}
-
-.skill-list img{
-width:26px;
+padding:6px 0;
 }
 
 /* TIMELINE */
 .timeline{
-border-left:3px solid var(--primary);
-padding-left:30px;
+border-left:3px solid #6b7280;
+padding-left:25px;
 }
 
 .timeline-item{
-margin-bottom:40px;
-opacity:0;
-transform:translateX(-40px);
+margin-bottom:30px;
 }
 
-/* TOGGLE */
-.toggle-btn{
+/* DARK MODE */
+.toggle{
 position:fixed;
 top:20px;
 right:20px;
-padding:8px 15px;
+background:#111;
+color:#fff;
 border:none;
+padding:8px 15px;
 border-radius:20px;
-background:var(--primary);
-color:white;
 cursor:pointer;
-z-index:999;
+}
+
+/* ANIMATION */
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:0.8s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero h1{font-size:32px;}
 }
 </style>
 </head>
 
 <body>
 
-<button class="toggle-btn">Toggle Theme</button>
-<canvas id="particles"></canvas>
+<button class="toggle">Toggle</button>
 
 <!-- HERO -->
 <section class="hero">
 <h1>Anshus Noufiya A K</h1>
-<p>
-Technology Leader | Agile Coach | Cloud & Engineering Strategist delivering enterprise-grade solutions across Dubai and global markets.
-</p>
+<p>Technology Leader • Scrum Master • Agile Coach delivering enterprise-scale solutions across UAE & global markets.</p>
 <a href="#" class="btn">Download CV</a>
 </section>
 
@@ -199,9 +217,9 @@ Technology Leader | Agile Coach | Cloud & Engineering Strategist delivering ente
 <section class="section">
 <h2>Executive Impact</h2>
 <div class="kpi-grid">
-<div class="kpi"><h2 class="counter" data-count="11">0</h2><p>Years Experience</p></div>
-<div class="kpi"><h2 class="counter" data-count="35">0</h2><p>Projects Delivered</p></div>
-<div class="kpi"><h2 class="counter" data-count="8">0</h2><p>Teams Led</p></div>
+<div class="kpi fade"><h2>12+</h2><p>Years Experience</p></div>
+<div class="kpi fade"><h2>40+</h2><p>Projects Delivered</p></div>
+<div class="kpi fade"><h2>10+</h2><p>Teams Led</p></div>
 </div>
 </section>
 
@@ -211,37 +229,33 @@ Technology Leader | Agile Coach | Cloud & Engineering Strategist delivering ente
 
 <div class="skill-grid">
 
-<div class="skill-card">
-<h3>Agile & Leadership</h3>
+<div class="skill-card fade">
+<h3>Agile Leadership</h3>
 <ul class="skill-list">
-<li><img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg"> Jira</li>
-<li><img src="https://cdn.worldvectorlogo.com/logos/confluence-1.svg"> Confluence</li>
-<li><img src="https://cdn.worldvectorlogo.com/logos/redmine.svg"> Redmine</li>
 <li>Scrum, Kanban, SAFe</li>
+<li>Sprint Planning & Delivery</li>
+<li>Agile Coaching</li>
+<li>Stakeholder Management</li>
 </ul>
 </div>
 
-<div class="skill-card">
-<h3>DevOps & Cloud</h3>
+<div class="skill-card fade">
+<h3>Cloud & DevOps</h3>
 <ul class="skill-list">
-<li><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg"> AWS</li>
-<li><img src="https://cdn.worldvectorlogo.com/logos/microsoft-azure-1.svg"> Azure</li>
-<li><img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg"> GCP</li>
+<li>AWS, Azure, GCP</li>
 <li>CI/CD Pipelines</li>
+<li>Docker & Automation</li>
+<li>Monitoring & Logging</li>
 </ul>
 </div>
 
-<div class="skill-card">
-<h3>Technology Expertise</h3>
+<div class="skill-card fade">
+<h3>Technology Stack</h3>
 <ul class="skill-list">
-<li><img src="https://cdn.worldvectorlogo.com/logos/php-1.svg"> PHP</li>
-<li><img src="https://cdn.worldvectorlogo.com/logos/symfony.svg"> Symfony</li>
-<li><img src="https://cdn.worldvectorlogo.com/logos/yii.svg"> Yii</li>
-<li><img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg"> Laravel</li>
-<li><img src="https://cdn.worldvectorlogo.com/logos/dot-net-core-7.svg"> .NET</li>
-<li><img src="https://cdn.worldvectorlogo.com/logos/java-4.svg"> Core Java</li>
-<li>AngularJS, jQuery</li>
+<li>PHP, Laravel, Symfony, Yii</li>
+<li>JavaScript, jQuery</li>
 <li>MySQL, PostgreSQL</li>
+<li>REST APIs</li>
 </ul>
 </div>
 
@@ -251,70 +265,41 @@ Technology Leader | Agile Coach | Cloud & Engineering Strategist delivering ente
 <!-- TIMELINE -->
 <section class="section">
 <h2>Professional Journey</h2>
+
 <div class="timeline">
-<div class="timeline-item"><h3>Technology Lead</h3><p>Leading enterprise engineering teams.</p></div>
-<div class="timeline-item"><h3>Scrum Master & Agile Coach</h3><p>Driving Agile transformation initiatives.</p></div>
-<div class="timeline-item"><h3>Senior Software Engineer</h3><p>Architecting scalable backend platforms.</p></div>
+
+<div class="timeline-item fade">
+<h3>Technology Lead – Infosys</h3>
+<p>Leading Agile teams delivering enterprise platforms.</p>
+</div>
+
+<div class="timeline-item fade">
+<h3>Scrum Master – ZH Healthcare</h3>
+<p>Driving Agile transformation in healthcare systems.</p>
+</div>
+
+<div class="timeline-item fade">
+<h3>Software Engineer – Govt Sector</h3>
+<p>Delivered finance automation platforms.</p>
+</div>
+
 </div>
 </section>
 
 <script>
-$(".toggle-btn").click(function(){
-$("body").toggleClass("dark");
-});
+// DARK MODE
+document.querySelector(".toggle").onclick = () => {
+document.body.classList.toggle("dark");
+};
 
-$(window).on("scroll",function(){
-
-$(".skill-card, .timeline-item").each(function(){
-if($(this).offset().top < $(window).scrollTop()+600){
-$(this).css({
-opacity:1,
-transform:"translate(0,0)",
-transition:"0.8s ease"
-});
+// SCROLL ANIMATION
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".fade").forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight-100){
+el.classList.add("show");
 }
 });
-
-$(".counter").each(function(){
-var $this=$(this);
-if(!$this.hasClass("counted") && $this.offset().top < $(window).scrollTop()+600){
-$this.addClass("counted");
-$({countNum:0}).animate({countNum:$this.data("count")},{
-duration:2000,
-step:function(){
-$this.text(Math.floor(this.countNum));
-}
 });
-}
-});
-
-});
-
-/* PARTICLES */
-var canvas=document.getElementById("particles");
-var ctx=canvas.getContext("2d");
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-var particles=[];
-for(var i=0;i<50;i++){
-particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2,d:Math.random()*1});
-}
-function draw(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-ctx.fillStyle="rgba(37,99,235,0.15)";
-ctx.beginPath();
-for(var i=0;i<particles.length;i++){
-var p=particles[i];
-ctx.moveTo(p.x,p.y);
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
-}
-ctx.fill();
-for(var i=0;i<particles.length;i++){
-particles[i].y+=particles[i].d;
-if(particles[i].y>canvas.height){particles[i].y=0;}
-}
-}
-setInterval(draw,33);
 </script>
 
 </body>
